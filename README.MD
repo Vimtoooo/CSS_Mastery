@@ -323,3 +323,53 @@ selector:pseudo-class {
 }
 ```
 
+### Hover Effect:
+
+The `:hover` pseudo-class lets you change the style of an element when the user hovers their mouse over it.
+
+#### Basic Syntax:
+
+Here's a simple example that changes the text color when you hover over a button:
+
+```css
+button {
+  color: black;
+}
+
+button:hover {
+  color: red;
+}
+```
+
+The button text is black by default, but when you hover over it, the text turns red.
+
+#### Example of Usage:
+
+```html
+<html>
+<head>
+    <title>Hover Effects</title>
+    <style>
+        .hover-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .hover-button:hover {
+            background-color: green;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <button class="hover-button">Hover over me!</button>
+</body>
+</html>
+```
+
+##### Result:
+
+![Hover Effect](Assets/Videos/chrome_qMb6fCX2hg.gif)
