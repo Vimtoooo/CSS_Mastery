@@ -198,3 +198,58 @@ For this particular example, we will manipulate with the <i>adjacent sibling sel
 ##### Result:
 
 ![Adjacent Sibling Selector](Assets/Photos/Adjacent%20Sibling%20Selector.jpg)
+
+### General Sibling Selector:
+
+The **general sibling selector (`~`)** selects elements that are sibling of a specified element and come after it.
+
+#### Basic Syntax:
+
+For example:
+
+```html
+<div>
+  <p>Paragraph 1</p>
+  <h2>Heading</h2>
+  <p>Paragraph 2</p>
+  <p>Paragraph 3</p>
+</div>
+```
+
+With this CSS:
+
+```css
+h2 ~ p {
+    color: blue;
+}
+```
+
+After applying this CSS, the result will be:
+
+* Paragraph 1 remains unchanged (it's not a sibling that comes after h2).
+* Paragraph 2 and 3 becomes blue (it's a sibling that comes after h2).
+
+#### Example of Usage:
+
+```html
+<html>
+<head>
+    <title>General Sibling Selector</title>
+    <style>
+        h1 ~ p { color: #ff69b4; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Party!</h1>
+    <p>Grab a drink.</p>
+    <p>Say hello to new friends.</p>
+    <div>Dance floor area</div>
+    <p>Take a selfie!</p>
+    <p>Enjoy the snacks.</p>
+</body>
+</html>
+```
+
+##### Result:
+
+![General Sibling Selector](Assets/Photos/General%20Sibling%20Selector.jpg)
