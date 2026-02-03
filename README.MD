@@ -143,3 +143,58 @@ After applying this CSS, only the first paragraph "This is a direct child" will 
 ##### Result:
 
 ![Child Selector](Assets/Photos/Child%20Selector.jpg)
+
+### Adjacent Sibling Selector:
+
+The **adjacent sibling selector (`+`)** is used to style an element that comes right after a specific element. Both of them must have the same parent, and "adjacent" means **immediately next to each other**.
+
+#### Basic Syntax:
+
+For example:
+
+```html
+<h2>Heading</h2>
+<p>This paragraph is styled</p>
+```
+
+With this CSS:
+
+```css
+h2 + p {
+  font-weight: bold;
+}
+```
+
+The paragraph is styled because it directly follows and h2 element.
+
+#### Example of Usage:
+
+For this particular example, we will manipulate with the <i>adjacent sibling selector</i> to precisely target the first `<p>` element and style it to our likings. See below:
+
+```html
+<html>
+<head>
+    <title>Adjacent Sibling Selector</title>
+    <style>
+        h2 + p {
+            color: blue;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Basketball Game Overview</h2>
+    <p>The basketball game was an exciting match between the **Los Angeles Lakers** and the **Golden State Warriors**, featuring intense offense and solid defense from both teams.</p>
+    
+    <p>During the first half, the Lakers held a slight lead, with LeBron James making key plays, while Stephen Curry of the Warriors kept the game tight with impressive three-pointers.</p>
+    
+    <p>This paragraph is not directly after an h2, so it should not be affected.</p>
+    
+    <p>In the second half, the Warriors fought back, with Klay Thompson hitting critical shots, but the Lakers secured their win with solid defense and a game-winning dunk by Anthony Davis.</p>
+</body>
+</html>
+```
+
+##### Result:
+
+![Adjacent Sibling Selector](Assets/Photos/Adjacent%20Sibling%20Selector.jpg)
