@@ -373,3 +373,61 @@ The button text is black by default, but when you hover over it, the text turns 
 ##### Result:
 
 ![Hover Effect](Assets/Videos/chrome_qMb6fCX2hg.gif)
+
+### Focus Effect:
+
+The `:focus` pseudo-class lets you style an element when it gets focus - like when you click on it or tab through it using the keyboard. It's a great way to highlight the element you're interacting with!
+
+#### Basic Syntax:
+
+For example:
+
+```html
+<input type="text">
+```
+
+Style the input when it gets focus:
+
+```css
+input {
+  border: 2px solid #ccc;
+}
+
+input:focus {
+  border-color: #4285f4;
+  box-shadow: 0 0 5px rgba(66, 133, 244, 0.5);
+}
+```
+
+When the user clicks on or tabs to this field, the border will change color to blue and a subtle blue will appear around it.
+
+#### Example of Usage:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Focus Effects</title>
+  <style>
+    input{
+      border: 2px solid gray;
+      padding: 8px;
+      outline: none;
+    }
+     input:focus {
+      border: 2px solid rgb(255, 152, 0);
+      background-color: rgb(255, 243, 224);
+     }
+  </style>
+</head>
+<body>
+  <h3>Focus Effects Demo</h3>
+  <input type="text" placeholder="Type here...">
+  <button>Click Me</button>
+</body>
+</html>
+```
+
+##### Result:
+
+![Focus Effect](Assets/Videos/chrome_G2ylNek7DW.gif)
