@@ -253,3 +253,56 @@ After applying this CSS, the result will be:
 ##### Result:
 
 ![General Sibling Selector](Assets/Photos/General%20Sibling%20Selector.jpg)
+
+### Recap - Selector Mastery + Combination:
+
+We have learned how to combine CSS selectors using **descendant, child, adjacent sibling and general sibling** combinators.
+
+* **Descendant Selector (`div p` for example)**: Used to target elements that are nested within other elements, for accuracy and precision.
+* **Child Selector (`>`)**: For applying styles to elements that are direct children of another element.
+* **Adjacent Sibling Selector (`+`)**: Used to style an element that comes right after a specific element.
+* **General Sibling Selector (`~`)**: They select elements that are sibling of a specified element and come after it.
+
+#### Example of a Webpage:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recap Challenge</title>
+    <style>
+		.rooms > p { color: #40e0d0; }
+		.facilities p { color: #2e8b57; }
+		div + p, p { color: #f4a300; }
+    </style>
+</head>
+<body>
+    <section>
+  		<h1>Welcome to Paradise Resort</h1>
+  
+  		<div class="rooms">
+    		<h2>Ocean View Rooms</h2>
+    		<p>Room 101</p>
+    		<p>Room 102</p>
+  		</div>
+
+  		<div class="facilities">
+    		<h2>Resort Facilities</h2>
+    		<div>
+      			<p>Infinity Pool</p>
+      			<p>Spa & Wellness Center</p>
+    		</div>
+    		<p>Beach Access</p>
+  		</div>
+
+  		<p>Beachfront Restaurant</p>
+  		<p>Sunset Bar</p>
+  		
+	</section>
+</body>
+</html>
+```
+
+##### Result:
+
+![Recap - Selector Mastery](Assets/Photos/Recap%20-%20Selector%20Mastery.jpg)
