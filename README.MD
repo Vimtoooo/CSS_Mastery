@@ -306,3 +306,20 @@ We have learned how to combine CSS selectors using **descendant, child, adjacent
 ##### Result:
 
 ![Recap - Selector Mastery](Assets/Photos/Recap%20-%20Selector%20Mastery.jpg)
+
+## Interactive Pseudo-Classes:
+
+### Pseudo-Classes:
+
+Interactive pseudo-classes let you change the look of elements when users do things like move their mouse over them, click them, or select them. They help make your website feel more responsive and fun to use.
+
+#### Basic Syntax:
+
+The syntax of pseudo-classes:
+
+```css
+selector:pseudo-class {
+  property: value;
+}
+```
+
