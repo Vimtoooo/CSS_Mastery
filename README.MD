@@ -434,7 +434,7 @@ When the user clicks on or tabs to this field, the border will change color to b
 
 ### Active Styles:
 
-The `:active` pseudo-class applies styles to an element when it is being activated by the user, typically hen a user clicks on an element and holds the mouse button down.
+The `:active` pseudo-class applies styles to an element when it is being activated by the user, typically when a user clicks on an element and holds the mouse button down.
 
 #### Basic Syntax:
 
@@ -480,3 +480,68 @@ When you click and hold down on the button, it will change color from blue to da
 ##### Result:
 
 ![Active Style](Assets/Videos/chrome_b8ZcJYvQSk.gif)
+
+### Recap - Interactive Pseudo-Classes:
+
+Here is the recap for the interactive pseudo-classes!
+
+* **Hover**: Triggers whenever the user hovers over an element.
+* **Focus**: Occurs when the user clicks or tabs to an element, making it a great choice to indicate that you are currently interacting with a specific element.
+* **Active**: Also triggers when the user clicks to an element or holds the mouse button down, giving users a visual feedback that their action is being registered.
+
+#### Example of a Webpage:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recap Challenge</title>
+    <style>
+        /* General page styling */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+        input {
+            padding: 8px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+        }
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #0077cc;
+            text-decoration: none;
+        }
+        /* Pseudo-class styles */
+        button:hover {
+            background-color: green;
+            font-size: 20px;
+        }
+        input:focus {
+            background-color: yellow;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Join the Jungle Adventure!</h1>
+    <p>Ready to embark on an epic journey? Sign up below:</p>
+
+    <button>Start Adventure</button>
+
+    <br><br>
+
+    <input type="text" placeholder="Enter your explorer name">
+
+    <br><br>
+
+    <a class="more" ref="#">Learn more about the adventure</a>
+</body>
+</html>
+```
+
+##### Result:
+
+![Recap - Interactive Pseudo-Classes](Assets/Videos/chrome_4EAE3efYgK.gif)
