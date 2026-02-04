@@ -431,3 +431,52 @@ When the user clicks on or tabs to this field, the border will change color to b
 ##### Result:
 
 ![Focus Effect](Assets/Videos/chrome_G2ylNek7DW.gif)
+
+### Active Styles:
+
+The `:active` pseudo-class applies styles to an element when it is being activated by the user, typically hen a user clicks on an element and holds the mouse button down.
+
+#### Basic Syntax:
+
+For example:
+
+```html
+<button class="action-button">Click Me!</button>
+```
+
+Add CSS to style the button when it's active:
+
+```css
+.action-button {
+  background-color: blue;
+}
+.action-button:active {
+  background-color: darkblue;
+}
+```
+
+When you click and hold down on the button, it will change color from blue to darkblue. This gives users visual feedback that their action is being registered.
+
+#### Example of Usage:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Active Pseudo-class</title>
+    <style>
+        .special-link:active {
+            color: #e74c3c;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="special-link">Interactive Link</a>
+</body>
+</html>
+```
+
+##### Result:
+
+![Active Style](Assets/Videos/chrome_b8ZcJYvQSk.gif)
