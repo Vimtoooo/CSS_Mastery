@@ -692,3 +692,83 @@ After applying the CSS, only "Last paragraph" will be red and bold because it's 
 ##### Result:
 
 ![Last-child pseudo-class](Assets/Photos/Last-child%20Pseudo-class.jpg)
+
+### Pattern Power: Using nth-child
+
+The `:nth-child()` pseudo-class selects elements based on their order inside a parent, using a number or a pattern to choose which ones.
+
+#### Basic Syntax:
+
+For example , we have a list:
+
+```html
+<ul>
+  <li>First item</li>
+  <li>Second item</li>
+  <li>Third item</li>
+  <li>Fourth item</li>
+  <li>Fifth item</li>
+</ul>
+```
+
+##### Selecting Even Numbers:
+
+This is how we select **even-numbered** list items:
+
+```css
+li:nth-child(even) {
+  background-color: lightblue;
+}
+```
+
+##### Selecting the 3rd item:
+
+This is how we select the **3rd item**:
+
+```css
+li:nth-child(3) {
+  font-weight: bold;
+}
+```
+
+##### Selecting every 5th item:
+
+This is how we select every 5th item:
+
+```css
+li:nth-child(5n) {
+  color: red;
+}
+```
+
+#### Example of Usage:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pattern Power: Using nth-child</title>
+  <style>
+    div:nth-child(3n) { background-color: yellow; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div>Item 1</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+    <div>Item 4</div>
+    <div>Item 5</div>
+    <div>Item 6</div>
+    <div>Item 7</div>
+    <div>Item 8</div>
+    <div>Item 9</div>
+    <div>Item 10</div>
+  </div>
+</body>
+</html>
+```
+
+##### Result:
+
+![The nth-child](Assets/Photos/The%20nth-child.jpg)
