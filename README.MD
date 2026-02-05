@@ -559,3 +559,73 @@ The common examples include:
 * `:first-child` — Selects the first child of a parent.
 * `:last-child` — Selects the last child of a parent.
 * `nt-child(n)` — Selects the nth child (e.g., every 2nd, 3rd, etc...).
+
+### Targeting the First Child:
+
+The `:first-child` pseudo-class targets the **first element among a group of sibling elements**.
+
+#### Basic Syntax:
+
+For example:
+
+```html
+<section>
+  <p>This paragraph will be blue and bold.</p>
+  <p>This paragraph will have default styling.</p>
+</section>
+```
+
+Any paragraph that is the first child element within its parent will be colored blue and have bold text.
+
+```css
+p:first-child {
+  color: blue;
+  font-weight: bold;
+}
+```
+
+You can combine and apply descendant, child, and other selectors to target elements more specifically. Here is another example:
+
+```css
+div:first-child h1 {
+ color: red;
+}
+```
+
+This selects the first div element among its siblings, and then changes the text color of the `<h1>` tag inside it to red.
+
+#### Example of Usage:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Targeting the First Child</title>
+  <style>
+    ul:first-child li {
+      color: blue;
+      background-color: lightyellow;
+      padding-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Grocery List</h2>
+  <ul>
+    <li>Fresh Apples</li>
+    <li>Organic Bananas</li>
+    <li>Whole Wheat Bread</li>
+  </ul>
+  
+  <h2>To-Do List for the Day</h2>
+  <ul>
+    <li>Complete coding challenge</li>
+    <li>Go for a walk in the park</li>
+  </ul>
+</body>
+</html>
+```
+
+##### Result:
+
+![First-child pseudo-class](Assets/Photos/First-child%20Pseudo-class.jpg)
