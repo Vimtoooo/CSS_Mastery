@@ -602,7 +602,7 @@ This selects the first div element among its siblings, and then changes the text
 <head>
     <title>Targeting the First Child</title>
   <style>
-    ul:first-child li {
+    li:first-child {
       color: blue;
       background-color: lightyellow;
       padding-left: 10px;
@@ -772,3 +772,89 @@ li:nth-child(5n) {
 ##### Result:
 
 ![The nth-child](Assets/Photos/The%20nth-child.jpg)
+
+### Structural Pseudo-Classes:
+
+Recap on the structural pseudo-classes.
+
+* `:first-child`: Selects the first child of an element inside a container or a tag.
+* `:last-child`: Selects the last child of an element inside a container or a tag.
+* `:nth-child()`: Precisely selects a given pattern of element(s):
+    - `(2)`: An integer indicating that only the 2nd element must be targeted.
+    - `(even)`: A keyword which automatically targets a pattern where the elements ordered in the **even** position will be targeted.
+    - `(3n)`: A patten identifier which targets every 3rd element to be chosen.
+
+#### Example of a Webpage:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }   
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }   
+        .image-container {
+            width: 200px;
+            padding: 10px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            text-align: center;
+        }     
+        img {
+            max-width: 100%;
+            height: auto;
+        }    
+        .caption {
+            margin-top: 8px;
+            font-size: 14px;
+        }
+        
+        /* Structural Pseudo-Classes */
+        .image-container:first-child img { border: 3px solid rgb(0, 0, 255); }
+        .image-container:last-child p { color: red; }
+        .image-container:nth-child(odd) { background-color: rgba(153, 153, 153, 1); }
+    </style>
+</head>
+<body>
+    <h1>My Photo Gallery</h1>
+    <div class="gallery">
+        <div class="image-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Sunrise_at_Newell_Beach%2C_2004.jpg" alt="Image 1">
+            <p class="caption">Sunrise at the beach</p>
+        </div>
+        <div class="image-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Mt_Herschel%2C_Antarctica%2C_Jan_2006.jpg" alt="Image 2">
+            <p class="caption">Mountain landscape</p>
+        </div>
+        <div class="image-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/NYC_wideangle_south_from_Top_of_the_Rock.jpg" alt="Image 3">
+            <p class="caption">City skyline</p>
+        </div>
+        <div class="image-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/D%C3%BClmen%2C_Rorup%2C_NSG_Roruper_Holz_--_2021_--_8187-91.jpg" alt="Image 4">
+            <p class="caption">Forest trail</p>
+        </div>
+        <div class="image-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Mesquite_Sand_Dunes_in_Death_Valley.jpg" alt="Image 5">
+            <p class="caption">Desert sunset</p>
+        </div>
+        <div class="image-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Pressure_ridge_at_Cape_Columbia.jpg" alt="Image 6">
+            <p class="caption">Arctic wilderness</p>
+        </div>
+    </div>
+</body>
+</html>
+```
+
+##### Result:
+
+![Recap - Structural Pseudo-classes](Assets/Photos/Recap%20-%20Structural%20Pseudo-classes.jpg)
