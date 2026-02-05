@@ -545,3 +545,17 @@ Here is the recap for the interactive pseudo-classes!
 ##### Result:
 
 ![Recap - Interactive Pseudo-Classes](Assets/Videos/chrome_4EAE3efYgK.gif)
+
+## Structural Pseudo-Classes:
+
+### Introduction:
+
+**Structural Pseudo-classes** in CSS are used to style elements based on their position or structure within the HTML document. They allo you to select elements like the first child, last child or specific numbered children without needing extra classes or IDs.
+
+#### Common Example:
+
+The common examples include:
+
+* `:first-child` — Selects the first child of a parent.
+* `:last-child` — Selects the last child of a parent.
+* `nt-child(n)` — Selects the nth child (e.g., every 2nd, 3rd, etc...).
