@@ -629,3 +629,66 @@ This selects the first div element among its siblings, and then changes the text
 ##### Result:
 
 ![First-child pseudo-class](Assets/Photos/First-child%20Pseudo-class.jpg)
+
+### Targeting the Last Child:
+
+The `:last-child` pseudo-class selects selects elements that are the last child of their parent.
+
+#### Basic Syntax:
+
+For example:
+
+```html
+<div class="parent">
+  <p>First paragraph</p>
+  <p>Middle paragraph</p>
+  <p>Last paragraph</p>
+</div>
+```
+
+To style only the last paragraph, use the `:last-child` pseudo-class:
+
+```css
+p:last-child {
+  color: red;
+  font-weight: bold;
+}
+```
+
+After applying the CSS, only "Last paragraph" will be red and bold because it's the last child of the parent div.
+
+#### Example of Usage:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Targeting the Last Child</title>
+  <style>
+    p:last-child {
+      background-color: #046ae0;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+    <div> 
+        <h2>Exploring the Universe</h2>
+        <p>The universe is vast, with countless stars and galaxies waiting to be discovered.</p>
+        <p>New technologies allow us to explore deeper into space, revealing its many secrets.</p>
+        <p>We continue to learn more about distant planets and the possibility of life beyond Earth.</p> 
+    </div>
+    <div>
+        <h2>The Deep Ocean</h2>
+        <p>Our oceans are mysterious, covering most of Earth, yet we know so little about them.</p>
+        <p>Many species live in extreme conditions, some of which are still being discovered today.</p>
+        <p>Exploring the ocean depths gives us insights into life at the planet's most remote locations.</p> 
+    </div>
+</body>
+</html>
+```
+
+##### Result:
+
+![Last-child pseudo-class](Assets/Photos/Last-child%20Pseudo-class.jpg)
