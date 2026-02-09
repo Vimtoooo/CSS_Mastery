@@ -1,54 +1,77 @@
 .menu-panel {
-    max-width: 600px;
-    background: #fffbe6;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 600px;
+  background: #fffbe6;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 h2 {
-    text-align: center;
-    color: #cc7a00;
+  text-align: center;
+  color: #cc7a00;
 }
 
 .top-menu {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .menu-list {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    background-color: #ffedcc;
-    border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #ffedcc;
+  border-radius: 8px;
 }
 
 .menu-item {
-    position: relative;
-    padding: 10px 15px;
+  position: relative;
+  padding: 10px 15px;
 }
 
 .menu-controls {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
 }
 
 .search {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
 }
 
 .cta-button {
-    padding: 10px;
-    background-color: #ff9900;
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
+  padding: 10px;
+  background-color: #ff9900;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
 }
+
+.submenu {
+    display: none;
+    position: absolute;
+    list-style-type: none;
+}
+
+.has-submenu { position: relative; }
+
+/* Pseudo-Classes */
+
+.has-submenu:hover .submenu {
+    display: block;
+    position: absolute;
+    background-color: #ffedcc;
+    list-style: none;
+    right: 0;
+    padding: 10px;
+    width: 60px;
+}
+
+
+
