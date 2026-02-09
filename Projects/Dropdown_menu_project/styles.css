@@ -53,8 +53,6 @@ h2 {
   border-radius: 6px;
 }
 
-/* add your CSS styles here */
-
 .submenu {
   display: none;
   position: absolute;
@@ -77,17 +75,22 @@ h2 {
   display: block;
 }
 
-.info-section p:first-child {
-  font-size: 20px;
-  font-weight: bold;
+.info-section p:first-child{
+    font-weight: 700;
+    font-size: 20px;
+}
+.intro ~ p {
+    padding: 5px;
+}
+li:nth-child(odd){
+    color: rgb(204, 61, 61)
 }
 
-.info-section .intro ~ p {
-  color: #333;
-  line-height: 1.5;
+.search:focus {
+    border-color: rgb(219, 225, 27);
+    outline: none;
 }
 
-.menu-list li:nth-child(odd) {
-  color: rgba(160, 127, 27, 0.749)
+.cta-button:hover {
+    background-color: rgb(255, 219, 133);
 }
-
