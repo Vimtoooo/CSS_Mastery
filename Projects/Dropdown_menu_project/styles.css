@@ -53,25 +53,41 @@ h2 {
   border-radius: 6px;
 }
 
+/* add your CSS styles here */
+
 .submenu {
-    display: none;
-    position: absolute;
-    list-style-type: none;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff5cc;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 160px;
+  border: 1px solid #ffcc66;
+  border-radius: 6px;
 }
 
-.has-submenu { position: relative; }
-
-/* Pseudo-Classes */
+.submenu li {
+  padding: 10px;
+}
 
 .has-submenu:hover .submenu {
-    display: block;
-    position: absolute;
-    background-color: #ffedcc;
-    list-style: none;
-    right: 0;
-    padding: 10px;
-    width: 60px;
+  display: block;
 }
 
+.info-section p:first-child {
+  font-size: 20px;
+  font-weight: bold;
+}
 
+.info-section .intro ~ p {
+  color: #333;
+  line-height: 1.5;
+}
+
+.menu-list li:nth-child(odd) {
+  color: rgba(160, 127, 27, 0.749)
+}
 
