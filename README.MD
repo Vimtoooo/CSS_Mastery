@@ -858,3 +858,56 @@ Recap on the structural pseudo-classes.
 ##### Result:
 
 ![Recap - Structural Pseudo-classes](Assets/Photos/Recap%20-%20Structural%20Pseudo-classes.jpg)
+
+## Visual Effects:
+
+### Gradients:
+
+Gradients in CSS allow you to create smooth transitions between two or more colors. Let's start with a simple linear gradient!
+
+#### Basic Syntax:
+
+```css
+/* Create a linear gradient from top to bottom */
+.gradient-box {
+  background: linear-gradient(to bottom, #ff9966, #ff5e62);
+}
+```
+
+This creates a gradient that transitions from orange (`#ff9966`) at the top to a reddish color (`#ff5e62`) at the bottom.
+
+#### Specifying the Direction:
+
+You can also specify the direction and use multiple colors like in the following example:
+
+```css
+/* Create a linear gradient from left to right */
+.gradient-box {
+  background: linear-gradient(to right, red, orange, yellow, green);
+}
+```
+
+#### Example of Usage:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .sunset-gradient {
+      border: 3px solid black;
+      height: 300px;
+      width: 100%;
+      background: linear-gradient(to bottom, #FFD700, #FF4500);
+    }
+  </style>
+</head>
+<body>
+  <div class="sunset-gradient"></div>
+</body>
+</html>
+```
+
+##### Result:
+
+![Gradients](Assets/Photos/Gradients.jpg)
