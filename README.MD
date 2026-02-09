@@ -911,3 +911,118 @@ You can also specify the direction and use multiple colors like in the following
 ##### Result:
 
 ![Gradients](Assets/Photos/Gradients.jpg)
+
+### CSS Filters:
+
+Filters let you **visually change images, backgrounds, and even text** using fun effects. It's like putting on sunglasses, turning on a spotlight, or stepping into black-and-white mode - all with one line of CSS.
+
+#### Blur(px):
+
+The `blur()` makes the element look soft and out of focus.
+
+```css
+img {
+  filter: blur(5px);
+}
+/* slightly out of focus */
+```
+
+#### Brightness(%):
+
+The `brightness()` controls ho light or dark something appears.
+
+```css
+img {
+  filter: brightness(150%);
+}
+/* brightens like turning on a spotlight. */
+```
+
+#### Grayscale(%):
+
+The `grayscale()` converts color to black and white.
+
+```css
+img {
+  filter: grayscale(100%);
+}
+/* classic vintage or newspaper effect. */
+```
+
+#### Sepia(%):
+
+The `sepia()` adds a warm, brownish tone for a retro photo vibe.
+
+```css
+img {
+  filter: sepia(70%);
+}
+/* like an old photo album. */
+```
+
+#### Conclusion:
+
+There are many more filters you can experiment with! There is an unlimited amount of creative effects that you can make nor mix simultaneously.
+
+#### Example of Usage:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    .gallery {
+        display: flex;
+        flex-wrap: wrap; /* Allows the images to wrap into two rows */
+        gap: 20px; /* Space between the images */
+        justify-content: center; /* Centers the images */
+        margin-top: 20px;
+
+    /* CSS Filters */
+    }
+    .gallery img {
+        width: 200px;
+        height: 260px;
+    }
+    
+    .gallery .blur img {
+        filter: blur(3px);
+    }
+
+    .gallery .brightness img {
+        filter: brightness(2.0);
+    }
+
+    .gallery .grayscale img {
+        filter: grayscale(100%);
+    }
+
+    .gallery .sepia img {
+        filter: sepia(70%);
+    }
+    </style>
+</head>
+<body>
+    <h1>CSS Filters Gallery Challenge</h1>
+
+    <div class="gallery">
+        <div class="blur">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/German_shepherd_dog_colt.jpg" alt="Blurred Image">
+        </div>
+        <div class="brightness">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Dog%2C_Helgafell%2C_Sn%C3%A6fellsnes_peninsula%2C_Iceland%2C_20230505_1507_5224.jpg" alt="Brightened Image">
+        </div>
+        <div class="grayscale">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Pyreneean_Mountain_dog_guarding_sheep.jpg" alt="Grayscale Image">
+        </div>
+        <div class="sepia">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Fawn_and_white_Welsh_Corgi_puppy_standing_on_rear_legs_and_sticking_out_the_tongue.jpg" alt="Sepia Image">
+        </div>
+    </div>
+</body>
+</html>
+```
+
+##### Result:
+
+![CSS Filters](Assets/Photos/CSS%20Filters.jpg)
