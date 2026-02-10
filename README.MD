@@ -1026,3 +1026,92 @@ There are many more filters you can experiment with! There is an unlimited amoun
 ##### Result:
 
 ![CSS Filters](Assets/Photos/CSS%20Filters.jpg)
+
+### Transform:
+
+CSS `transform` property lets you change the appearance of an element by <i>scaling, rotating, moving (translating), or skewing it</i>. These changes are applied instantly unless combined with transitions.
+
+#### Possible Values for Transform:
+
+* `scale()`: Resizes an element (make it bigger or smaller).
+* `rotate()`: Rotates an element by degrees.
+* `translate()`: Moves the element to the left/right or up/down vectors.
+* `skew()`: Slants the element along the X or Y axis.
+
+#### Basic Syntaxes:
+
+Here are the following examples:
+
+```css
+/* Makes the image 20% larger */
+img {
+  transform: scale(1.2); 
+}
+
+/* Rotates the box 45 degrees clockwise */
+.box {
+  transform: rotate(45deg); 
+}
+
+/* Moves the element 50px to the right and 100px down */
+div {
+  transform: translate(50px, 100px); 
+}
+
+/* Skews the element 20 degrees on the X axis and 10 degrees on the Y axis */
+div {
+  transform: skew(20deg, 10deg); 
+}
+```
+
+#### Example of Usage:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    .gallery {
+        display: flex;
+        flex-wrap: wrap; /* Allows the images to wrap into two rows */
+        gap: 20px; /* Space between the images */
+        justify-content: center; /* Centers the images */
+        margin-top: 20px;
+    }
+    .gallery img {
+        width: 200px;
+        height: 260px;
+    }
+    /* Hover + Transformations */
+    .gallery div:first-child:hover { transform: scale(1.2); }
+    .gallery .img2:hover { transform: rotate(45deg); }
+    .gallery .img3:hover { transform: translate(-5px, -3px); }
+    .gallery div:last-child:hover { transform: skew(20deg, 10deg); }
+    </style>
+    <title>Transformations with Transform</title>
+</head>
+<body>
+    <h1>CSS Filters Gallery Challenge</h1>
+    <div class="gallery">
+        <div class="img1">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/German_shepherd_dog_colt.jpg" alt="Blurred Image">
+        </div>
+        <div class="img2">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Dog%2C_Helgafell%2C_Sn%C3%A6fellsnes_peninsula%2C_Iceland%2C_20230505_1507_5224.jpg" alt="Brightened Image">
+        </div>
+        <div class="img3">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Pyreneean_Mountain_dog_guarding_sheep.jpg" alt="Grayscale Image">
+        </div>
+        <div class="img4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Fawn_and_white_Welsh_Corgi_puppy_standing_on_rear_legs_and_sticking_out_the_tongue.jpg" alt="Sepia Image">
+        </div>
+    </div>
+</body>
+</html>
+```
+
+##### Result:
+
+![Transform Property in Action](Assets/Videos/chrome_llJCc5DY12.gif)
