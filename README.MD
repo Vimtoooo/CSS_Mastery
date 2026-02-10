@@ -1115,3 +1115,53 @@ div {
 ##### Result:
 
 ![Transform Property in Action](Assets/Videos/chrome_llJCc5DY12.gif)
+
+### Transition & Hover Effects:
+
+A transition lets you change a property **smoothly over time** instead of instantly.
+
+#### Basic Syntax:
+
+```css
+selector {
+    transition: property duration timing-function delay;
+}
+```
+
+#### Breakdown:
+
+* **property**: The CSS property you want to transform (e.g., background-color, width, opacity).
+* **duration**: The time it takes for the transition to complete (e.g., 1s for 1 second).
+* **timing-function**: How the transition progresses (e.g., linear, ease, ease-in).
+* **delay**: How long to wait before starting the transition (optional).
+
+#### Example of Usage:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .card {
+      background-color: white;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    }
+    .card:hover {
+      background-color: orange;
+      box-shadow: 2px 5px 5px rgba(255, 255, 255, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    Hover over me!
+  </div>
+</body>
+</html>
+```
+
+##### Result:
+
+![Transition & Hover Effects](Assets/Videos/chrome_Pl8VhLoDLH.gif)
