@@ -4,40 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-    .gallery {
-        display: flex;
-        flex-wrap: wrap; /* Allows the images to wrap into two rows */
-        gap: 20px; /* Space between the images */
-        justify-content: center; /* Centers the images */
-        margin-top: 20px;
-    }
-    .gallery img {
-        width: 200px;
-        height: 260px;
-    }
-    /* Hover + Transformations */
-    .gallery div:first-child:hover { transform: scale(1.2); }
-    .gallery .img2:hover { transform: rotate(45deg); }
-    .gallery .img3:hover { transform: translate(-5px, -3px); }
-    .gallery div:last-child:hover { transform: skew(20deg, 10deg); }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Hero Section with Gradient */
+        .hero {
+            padding: 80px 20px;
+            color: #3e2723;
+            background: linear-gradient(to bottom, #3e2723, #fffaf0);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-btn {
+            background-color: #8d6e63;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: background-color 1.4s ease 0.2s, box-shadow 1s ease-in;
+        }
+        /* Gallery section */
+        .gallery {
+            padding: 50px 20px;
+            background: #fffaf0;
+        }
+
+        .gallery h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #4e342e;
+        }
+
+        .coffee-img {
+            max-width: 300px;
+            border-radius: 12px;
+            filter: sepia(60%);
+        }
+        
+        /* Hover Effects */
+        .cta-btn:hover {
+            transform: rotate(-3deg);
+            background-color: rgb(130, 200, 20);
+            box-shadow: 2px 5px 5pc black;
+        }
+
+        .coffee-img:hover {
+            filter: sepia(0%);
+            transform: scale(1.1);
+        }
+        
     </style>
-    <title>Transformations with Transform</title>
+    <title>Recap - Visual Effects</title>
 </head>
 <body>
-    <h1>CSS Filters Gallery Challenge</h1>
-    <div class="gallery">
-        <div class="img1">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/German_shepherd_dog_colt.jpg" alt="Blurred Image">
-        </div>
-        <div class="img2">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Dog%2C_Helgafell%2C_Sn%C3%A6fellsnes_peninsula%2C_Iceland%2C_20230505_1507_5224.jpg" alt="Brightened Image">
-        </div>
-        <div class="img3">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Pyreneean_Mountain_dog_guarding_sheep.jpg" alt="Grayscale Image">
-        </div>
-        <div class="img4">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Fawn_and_white_Welsh_Corgi_puppy_standing_on_rear_legs_and_sticking_out_the_tongue.jpg" alt="Sepia Image">
-        </div>
-    </div>
+    <header class="hero">
+        <h1>Welcome to Coffee Bliss</h1>
+        <p>Your daily dose of joy in a cup</p>
+        <button class="cta-btn">Order Now</button>
+    </header>
+    <section class="gallery">
+        <h2>Our Signature Blend</h2>
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" alt="Cup of Coffee" class="coffee-img" />
+    </section>
 </body>
 </html>

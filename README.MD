@@ -929,7 +929,7 @@ img {
 
 #### Brightness(%):
 
-The `brightness()` controls ho light or dark something appears.
+The `brightness()` controls how light or dark something appears.
 
 ```css
 img {
@@ -1165,3 +1165,118 @@ selector {
 ##### Result:
 
 ![Transition & Hover Effects](Assets/Videos/chrome_Pl8VhLoDLH.gif)
+
+### Recap - Visual Effects:
+
+Here is another recap on what has been mentioned in this topic:
+
+* **Gradient**: The `linear-gradient(direction first-color second-color ...)` allows you to combine colors with smooth transitions.
+    - `direction`: Choose the gradient direction (`to left`, `to right`, `to top` or `to bottom`).
+    - `first-color`, `second-color` ... : Define the colors that will be mixed in with the gradient.
+* **CSS Filters**: The `filter` property lets you **visually change images, backgrounds, and even text** using fun effects.
+    - `blur(px)`: Makes the element look soft and out of focus (more blurry).
+    - `brightness(%)`: Modifies how light or dark the image may appear.
+    - `grayscale(%)`: This converts the colors of the current image to black and white.
+    - `sepia(%)`: Sepia adds a warm, brownish tone for a retro photo vibe.
+* **Transform**: The `transform` property lets you change the appearance of an element by scaling, rotating, moving (translating), or skewing it.
+    - `scale(1)`: Controls the size of the element, making it bigger or smaller (allowing integers or decimal numbers to be inserted).
+    - `rotate(deg)`: Rotates the element by degrees.
+    - `translate(deg, deg)`: Moves the element to the left/right or up/down vectors (negatives can be used for changing vector directions).
+    - `skew(deg, deg)`: Slants an element along the X or Y axis.
+* **Hover & Transition**: The `transition: property duration timing-function delay;` property lets you change a property **smoothly over time** instead of instantly.
+    - **property**: The element that you want to target.
+    - **duration**: The duration that it will take to complete the entire transition, ths can be used with the `s` unit (represents seconds).
+    - **timing-function**: How the transition progresses (e.g., linear, ease, ease-in).
+    - **delay**: How long for the transition to start happening (optional).
+
+#### Example of a Website:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Hero Section with Gradient */
+        .hero {
+            padding: 80px 20px;
+            color: #3e2723;
+            background: linear-gradient(to bottom, #3e2723, #fffaf0);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-btn {
+            background-color: #8d6e63;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: background-color 1.4s ease 0.2s, box-shadow 1s ease-in;
+        }
+        /* Gallery section */
+        .gallery {
+            padding: 50px 20px;
+            background: #fffaf0;
+        }
+
+        .gallery h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #4e342e;
+        }
+
+        .coffee-img {
+            max-width: 300px;
+            border-radius: 12px;
+            filter: sepia(60%);
+        }
+        
+        /* Hover Effects */
+        .cta-btn:hover {
+            transform: rotate(-3deg);
+            background-color: rgb(130, 200, 20);
+            box-shadow: 2px 5px 5pc black;
+        }
+
+        .coffee-img:hover {
+            filter: sepia(0%);
+            transform: scale(1.1);
+        }
+        
+    </style>
+    <title>Recap - Visual Effects</title>
+</head>
+<body>
+    <header class="hero">
+        <h1>Welcome to Coffee Bliss</h1>
+        <p>Your daily dose of joy in a cup</p>
+        <button class="cta-btn">Order Now</button>
+    </header>
+    <section class="gallery">
+        <h2>Our Signature Blend</h2>
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" alt="Cup of Coffee" class="coffee-img" />
+    </section>
+</body>
+</html>
+```
+
+##### Result:
+
+![Recap - Visual Effects](Assets/Videos/chrome_M1klzUJB6c.gif)
