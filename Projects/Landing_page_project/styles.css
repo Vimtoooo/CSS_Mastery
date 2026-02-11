@@ -17,7 +17,7 @@ body{
 .hero p{
     color: white;
 }
-
+/* Button styles */
 .btn {
   background-color: #ff9933;
   color: white;
@@ -37,23 +37,39 @@ body{
   background-color: #cc6d1f;
 }
 
+/* The features section */
 .features {
-    padding: 10px;
-    text-align: center;
+  padding: 60px 20px;
+  text-align: center;
 }
 
 .section-title {
-    font-size: 32px;
-    color: rgb(68, 192, 111);
-    padding-bottom: 10px;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 40px;
 }
 
 .cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-.feature { padding: 10px; }
+.feature {
+    background-color: white;
+    border: 2px dashed greenyellow;
+    border-radius: 15px;
+    padding: 15px;
+    width: 300px;
+}
 
+.icon {
+    transform: scale(1.5);
+    margin: 10px;
+}
+
+.feature h3 {
+    color: rgb(60, 159, 36);
+    padding-bottom: 5px;
+}
