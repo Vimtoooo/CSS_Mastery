@@ -1433,3 +1433,101 @@ This will place item 2 starting at row line 2 and spanning across 2 rows.
 ##### Result:
 
 ![Grid-Rows](Assets/Photos/Grid-Rows.jpg)
+
+### Named Areas:
+
+Instead of placing items using line numbers, you can give parts of your grid names, using the `grid-template-areas` property. This method is great for creating clean, readable layouts - especially when working with multiple sections like headers, sidebars, and footers. See the example bellow:
+
+#### Basic Syntax:
+
+```css
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "header header header"
+    "sidebar content content"
+    "footer footer footer";
+}
+```
+
+Here, we define a container with CSS Grid and use `grid-template-areas` to create a named layout. Each line of text makes a row, and each word in the line is a part of the grid. If you repeat a word, that area will stretch across more space!
+
+Then, you match your HTML elements to those names like this:
+
+```css
+.header { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.content { grid-area: content; }
+.footer { grid-area: footer; }
+```
+
+![Areas Example](Assets/Photos/Named%20Areas%20Example.png)
+
+#### Example of Usage:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .container {
+      height: 100vh;
+      gap: 10px;
+      /* Setting up the grid template */
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas:
+        "header header"
+        "profile main"
+        "footer footer";
+    }
+    
+    .header {
+      /* Assign to header area */
+      grid-area: header;
+      background-color: #f1c40f;
+      padding: 20px;
+    }
+    
+    .profile {
+      /* Assign to profile area */
+      grid-area: profile;
+      background-color: #3498db;
+      padding: 20px;
+    }
+    
+    .main {
+      /* Assign to main area */
+      grid-area: main;
+      background-color: #2ecc71;
+      padding: 20px;
+    }
+    
+    .footer {
+      /* Assign to footer area */
+      grid-area: footer;
+      background-color: #e74c3c;
+      padding: 20px;
+    }
+  </style>
+  <title>Using grid-template-areas</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">Header</div>
+    <div class="profile">Profile</div>
+    <div class="main">Main Content</div>
+    <div class="footer">Footer</div>
+  </div>
+</body>
+</html>
+```
+
+##### Result:
+
+![Grid-template-areas](Assets/Photos/grid-template-areas.png)
