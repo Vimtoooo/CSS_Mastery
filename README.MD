@@ -1357,3 +1357,79 @@ Define rows with the `gird-template-rows` property. Use the `gap` property to ad
 ##### Result:
 
 ![Grid Basics](Assets/Photos/Grid%20basics.jpg)
+
+### Grid-row Item Placement:
+
+The `grid-row` property allows you to control where an **item is placed vertically in a CSS grid**. It specifies on which row to start and end the item.
+
+#### Basic Syntax:
+
+So, let's say that we have a simple container with 8 items, and we want the first item to span from row line 1 to row line 4 in the grid.
+
+```css
+.item1 {
+  grid-row: 1 / 4;
+}
+```
+
+Looking somewhat like this:
+
+![grid-row example](Assets/Photos/grid-row%20example.png)
+
+#### Spanning Across Multiple Rows:
+
+To span across multiple rows, you can also use the `span` keyword:
+
+```css
+.item2 {
+  grid-row: 2 / span 2;
+  background-color: lightpink;
+}
+```
+
+This will place item 2 starting at row line 2 and spanning across 2 rows.
+
+#### Example of Usage:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  background-color: dodgerblue;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
+}
+.grid-container div:nth-child(4) {
+  grid-row: 2 / 4;
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+</div>
+</body>
+</html>
+```
+
+##### Result:
+
+![Grid-Rows](Assets/Photos/Grid-Rows.jpg)
