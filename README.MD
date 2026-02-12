@@ -1280,3 +1280,80 @@ Here is another recap on what has been mentioned in this topic:
 ##### Result:
 
 ![Recap - Visual Effects](Assets/Videos/chrome_M1klzUJB6c.gif)
+
+## Build With CSS Grid:
+
+### Grid Basics:
+
+CSS Grid is a layout system that lets you easily create web pages with rows and columns. It's great for building complex and responsive layouts without needing flots or tricky positioning. On top of that, it functions in ll modern browsers!
+
+#### Basic Syntax:
+
+To create a grid container, use the `display` property with the `grid` value next to it:
+
+```css
+.container {
+    display: grid;
+}
+```
+
+#### Defining Columns:
+
+Define columns in your grid using the `grid-template-columns` property with `px` or `fr` (fraction) units:
+
+```css
+/* This creates three columns where the middle column takes up twice as much space as the other two. */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+```
+
+#### Defining Rows:
+
+Define rows with the `gird-template-rows` property. Use the `gap` property to add space between the grid items.
+
+```css
+/* Creates a grid with two rows: the first is 100px high, the second is 200px */
+.container {
+  display: grid;
+  grid-template-rows: 100px 200px;
+  gap: 20px;
+}
+```
+
+#### Example of Usage:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .item{
+            border: 2px solid black;
+            background-color: #82f5d0;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr;
+            grid-template-rows: 150px 250px;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+</body>
+</html>
+```
+
+##### Result:
+
+![Grid Basics](Assets/Photos/Grid%20basics.jpg)
