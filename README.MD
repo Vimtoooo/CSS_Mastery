@@ -1531,3 +1531,89 @@ Then, you match your HTML elements to those names like this:
 ##### Result:
 
 ![Grid-template-areas](Assets/Photos/grid-template-areas.png)
+
+### Recap - Build With CSS Grid:
+
+Finally, let us recap on what we have gone through with grids in CSS:
+
+* `display: grid;`: Allows you to instantiate a grid container for specific grid manipulations.
+* `grid-template-columns` & `grid-template-rows`: Define how many and the length of each row and column, by either using `px` or `fr` (fraction) units. While adding a `gap` allows you to give breathing space between each grid.
+* `grid-row`: A property which allows you to control where an **item is placed vertically in a CSS grid**. Noting the syntax `grid-row: start-position / span end-position;`:
+    - **start-position**: The specified row line that the span will begin from.
+    - **end-position**: The specified row line the the span will terminate.
+    - **span**: A keyword which permits an item to span across multiple rows at once.
+* `grid-template-areas`: A property which give parts of your grid names, while also allowing to structure and modify which elements will be staying within each grid. Following the syntax:
+
+```css
+.item1 {
+    grid-template-areas:
+        "header header header"      /* TOP-ROW */
+        "sidebar content content"   /* MIDDLE-ROW */
+        "footer footer footer";     /* BOTTOM-ROW */
+}
+```
+
+- **Top-Row**: The header will consume only the top row.
+- **Middle-Row**: The sidebar and content will be defined here.
+- **Bottom-Row**: Only the footer stays bellow.
+
+Then, you match your HTML elements to those names like this:
+
+```css
+.header { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.content { grid-area: content; }
+.footer { grid-area: footer; }
+```
+
+#### Example of a Webpage:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    img{
+        width: 100%;
+    }
+    .header{
+        text-align: center;
+        padding: 23px;
+        background-color: #afe1e3; 
+    }
+    /* Grid Styles */
+    .container {
+      display: grid;
+      gap: 10px;
+      margin: 10px;
+      grid-template-rows: 2fr 3fr;
+      grid-template-columns: 8fr 8fr 8fr;
+      grid-template-areas:
+        "header header header"
+        "img1 img2 img3";
+    }
+    /* Grid insertion for elements */
+    .header { grid-area: header; }
+    .img1 { grid-area: img1; }
+    .img2 { grid-area: img2; }
+    .img3 { grid-area: img3; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">My Gallery</div>
+    <div class="img1"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Burchell%27s_zebra_%28Equus_quagga_burchellii%29_2.jpg"></div>
+    <div class="img2"><img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Zebra_zebras_-_tarangire_tanzania_africa.jpg"></div>
+    <div class="img3"><img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Zebra-Lake_Nakuru.jpg"></div>
+</div>
+</body>
+</html>
+```
+
+##### Result:
+
+![Recap - Build with CSS Grid](Assets/Photos/Recap%20-%20Build%20with%20CSS%20Grid.jpg)
