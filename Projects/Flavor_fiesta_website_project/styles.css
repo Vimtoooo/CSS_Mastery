@@ -1,25 +1,50 @@
-body {
+ body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f4f4;
   color: #333;
 }
-img {
+img{
     width: 100%;
 }
+
+/* Add you CSS styles here */
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:
     "header header header"
-    "hero featured featured featured"
+    "hero featured featured"
     "footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
   gap: 10px;
+  padding: 20px;
 }
 
-.header { grid-area: header; }
-.hero { grid-area: hero; }
-.featured { grid-area: featured; }
-.footer { grid-area: footer; }
+/* Areas */
+.header {
+  grid-area: header;
+}
 
+.hero {
+  grid-area: hero;
+}
+
+.featured {
+  grid-area: featured;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.header {
+    background-color: rgb(12, 5, 108);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 38px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    margin: 2px;
+}
