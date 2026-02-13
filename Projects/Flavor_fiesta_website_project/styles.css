@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+img {
+    width: 100%;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "hero featured featured featured"
+    "footer footer footer";
+  gap: 10px;
+}
+
+.header { grid-area: header; }
+.hero { grid-area: hero; }
+.featured { grid-area: featured; }
+.footer { grid-area: footer; }
+
