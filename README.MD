@@ -1617,3 +1617,58 @@ Then, you match your HTML elements to those names like this:
 ##### Result:
 
 ![Recap - Build with CSS Grid](Assets/Photos/Recap%20-%20Build%20with%20CSS%20Grid.jpg)
+
+## Final Challenges:
+
+In this category, I will be building mini projects based on what we learned in this entire repository.
+Let's head right into it!
+
+### Highlight Active Menu:
+
+#### Overview:
+
+A simple navigation menu with four categories to navigate to:
+
+- Home
+- About
+- Blog
+- Contact
+
+#### HTML Document:
+
+```html
+<html>
+<head>
+    <title>Highlight Active Menu</title>
+    <style> 
+        nav {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            background-color: rgb(110, 210, 0);
+            text-align: center;
+        }
+        nav a {
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            transition: background-color 1s ease, color 0.5s ease;
+        }
+        /* Pseudo-Classes */
+        a:hover { background-color: rgba(50, 168, 82, 1); }
+        a:active { color: white; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#" class="active">Blog</a>
+        <a href="#">Contact</a>
+    </nav>
+</body>
+</html>
+```
+
+##### Result:
+
+![Highlight Active Menu](Assets/Videos/chrome_ZT98cmMvoX.gif)
