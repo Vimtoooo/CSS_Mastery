@@ -1775,3 +1775,48 @@ A simple button which pursues hovering effects.
 ##### Result:
 
 ![Button Hover Effect](Assets/Videos/chrome_g3mTp403WC.gif)
+
+### Grid Card Layout:
+
+#### Overview:
+
+Display of two cards with simple grid property usage.
+
+#### HTML Document:
+
+```html
+<html>
+<head>
+  <title>Grid Card Layout</title>
+  <style> 
+    .card {
+        background-color: #0252c9;
+        padding: 16px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+  </style>
+</head>
+<body>
+    <div class="card-container">
+      <div class="card">
+        <h3>Card 1</h3>
+        <p>This is the first card with some text.</p>
+      </div>
+      <div class="card">
+        <h3>Card 2</h3>
+        <p>This is the second card with more content.</p>
+      </div>
+    </div>
+</body>
+</html>
+```
+
+##### Result:
+
+![Grid Card Layout](Assets/Photos/Grid%20Card%20Layout.jpg)
