@@ -1737,3 +1737,41 @@ We have been given a zebra table rows, with defined columns and filled in rows. 
 ##### Result:
 
 ![Zebra Table Row](Assets/Photos/Zebra%20Table%20Row.jpg)
+
+### Button Hover Effect:
+
+#### Overview:
+
+A simple button which pursues hovering effects.
+
+#### HTML Document:
+
+```html
+<html>
+<head>
+  <title>Button Hover Effect</title>
+  <style> 
+    .cta-button {
+      background-color: #6a1b9a;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: transform 0.3s ease;
+    }
+    /* Interactive Pseudo-Class */
+    .cta-button:hover {
+        transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+    <button class="cta-button">Click Me</button>
+</body>
+</html>
+```
+
+##### Result:
+
+![Button Hover Effect](Assets/Videos/chrome_g3mTp403WC.gif)
