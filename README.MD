@@ -1820,3 +1820,35 @@ Display of two cards with simple grid property usage.
 ##### Result:
 
 ![Grid Card Layout](Assets/Photos/Grid%20Card%20Layout.jpg)
+
+### Blurred Hero Image:
+
+#### Overview:
+
+A photo of New York City with a blur filter applied.
+
+#### HTML Document:
+
+```html
+<html>
+<head>
+  <title>Blurred Hero Image</title>
+  <style>
+    img {
+    width: 100%;
+    filter: blur(2px);
+    }
+  </style>
+</head>
+<body>
+    <div class="gallery">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu.jpg
+">
+    </div>
+</body>
+</html>
+```
+
+##### Result:
+
+![Blurred Hero Image](Assets/Photos/Blurred%20Hero%20Image.jpg)
