@@ -1672,3 +1672,68 @@ A simple navigation menu with four categories to navigate to:
 ##### Result:
 
 ![Highlight Active Menu](Assets/Videos/chrome_ZT98cmMvoX.gif)
+
+### Zebra Table Rows:
+
+#### Overview:
+
+We have been given a zebra table rows, with defined columns and filled in rows. Now, the task is to manipulate with the structured pseudo-classes to add background color to every second row (rows that are indexes at even numbers).
+
+#### HTML Document:
+
+```html
+<html>
+<head>
+  <title>Zebra Table Rows</title>
+  <style>
+    .destinations {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: sans-serif;
+    }
+    
+    .destinations th, .destinations td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+    }
+    
+    /* Structural Pseudo-Classes */
+    tr:nth-child(even) { background-color: #f2f2f2; }
+  </style>
+</head>
+<body>
+    <table class="destinations">
+      <tr>
+        <th>Destination</th>
+        <th>Country</th>
+        <th>Best Season</th>
+      </tr>
+      <tr>
+        <td>Kyoto</td>
+        <td>Japan</td>
+        <td>Spring</td>
+      </tr>
+      <tr>
+        <td>Reykjavik</td>
+        <td>Iceland</td>
+        <td>Winter</td>
+      </tr>
+      <tr>
+        <td>Barcelona</td>
+        <td>Spain</td>
+        <td>Summer</td>
+      </tr>
+      <tr>
+        <td>Cape Town</td>
+        <td>South Africa</td>
+        <td>Autumn</td>
+      </tr>
+    </table>
+</body>
+</html>
+```
+
+##### Result:
+
+![Zebra Table Row](Assets/Photos/Zebra%20Table%20Row.jpg)
